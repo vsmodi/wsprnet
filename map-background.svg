@@ -1,0 +1,5 @@
+<!-- map-background.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512">
+    <rect width="100%" height="100%" fill="#2c3e50"/>
+    <path fill="#3498db" d="M..."/> <!-- SVG path data for the map -->
+</svg>
