@@ -7,6 +7,9 @@ body, html {
     height: 100%;
     overflow-x: hidden;
 }
+label {
+    color: #000; /* This sets the label text color to black */
+}
 
 .container {
     display: flex;
