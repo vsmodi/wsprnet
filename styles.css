@@ -18,6 +18,28 @@ body.map-page{
 * FORM CSS START
 */
 /* Set a background color for the form container */
+input#DisplayData {
+    background: blue;
+    border: 0px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    float: left;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+}
+input#Clear {
+    background: blue;
+    border: 0px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    float: left;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+}
 #selectioncontainer {
     float: left;
     width: 250px; /* Slightly increased width */
