@@ -15,7 +15,7 @@ body.map-page{
     overflow-x: hidden;
 }
 label.radio-label{
-    font-weight: 300 !important;
+    font-weight: normal !important;
 }
 /*
 * FORM CSS START
