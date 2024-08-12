@@ -18,6 +18,43 @@ body.map-page{
 * FORM CSS START
 */
 /* Set a background color for the form container */
+#selectioncontainer {
+    float: left;
+    background-color: #f7f9fc; 
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Style for labels */
+label {
+    color: #333; /* Dark gray color for better readability */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style the inputs */
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Style the radio buttons */
+input[type="radio"] {
+    margin-right: 8px;
+}
+/* Status and map container styling */
+#mapandstatuscontainer {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/***/
+/* Set a background color for the form container */
 input#DisplayData {
     background: blue;
     border: 0px;
