@@ -169,8 +169,9 @@ tr:nth-child(even) {
 }
 
 #mapandstatuscontainer {
-    float:left; 
-    width:85%
+    float: left;
+    width: 80%;
+    margin-left: 10px;
 }
 
 #map { 
