@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Balloon Tracking using WSPR Data">
+    <meta name="keywords" content="Balloon Tracking WSPR Data">
+    <meta name="author" content="Vruti Modi">
+    <title>Balloon Tracking using WSPR Data</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+<body>
+    <form id="myform" onsubmit="return false">
+        <div>
+            <header>
+                <h2>WSPR Data</h2>
+                <hr>
+            </header>
+            <div id="selectioncontainer">
+                <label for="Reporter">Call Sign:</label><br>
+                <input type="text" id="Reporter" name="Reporter" size="8" maxlength="8" value="WA5LRU/2">
+                <label class="error" for="Reporter" id="ReporterError"></label>
+                <br><br>
+                <label for="FromDate">From Date: </label><br>
+                <input type="date" id="FromDate" name="FromDate" size="10" value = "2024-04-01">
+                <br><br>
+                <label for="ToDate">To Date:</label><br>
+                <input type="date" id="ToDate" name="ToDate" size="10" value = "2024-04-28">
+                <br><br>
+                <label>Choose a Report:</label><br>
+                <label for="rdShowMap"><input type="radio" id="rdShowMap" name="rdData" value="Map" checked>Show Map</label><br>
+                <label for="rdShowMapAndListeners"><input type="radio" id="rdShowMapAndListeners" name="rdData" value="ShowMapAndListener">Map and Listeners</label><br>
+                <label for="rdShowData"><input type="radio" id="rdShowData" name="rdData" value="ShowData">Display Data</label><br>
+                <label for="rdDownloadCSVData"><input type="radio" id="rdDownloadCSVData" name="rdData" value="DownloadCSVData">Download Data(.CSV)</label><br>
+                <label for="rdDownloadJSONData"><input type="radio" id="rdDownloadJSONData" name="rdData" value="DownloadJSONData">Download Data (JSON)</label><br>
+                <br>
+                <input type="submit" value="Display Data" id="DisplayData" name="DisplayData" onclick="ProcessForm();">
+                <input type="submit" formnovalidate value="Clear Form" id="Clear" name="Clear" onclick="ClearForm();">
+                <br>
+            </div>
+            <div id="mapandstatuscontainer">
+                <div id="status"></div><br>
+                <div id="mapcontainer">
+                    <div id="map"></div>
+                </div>
+                <div id="data" class="mono"></div>
+            </div>
+        </div>
+    </form>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
