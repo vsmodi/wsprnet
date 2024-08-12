@@ -14,7 +14,7 @@ body, html {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: url('map-background.svg') no-repeat center center/cover;
+    background: url('transmission-tower.jpg') no-repeat center center/cover;
     text-align: center;
     position: relative;
 }
