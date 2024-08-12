@@ -40,63 +40,7 @@ input#Clear {
     color: #fff;
     font-size: 1rem;
 }
-#selectioncontainer {
-    float: left;
-    width: 250px; /* Slightly increased width */
-    background-color: #f7f9fc; /* Light blue-gray background */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
 
-/* Style for labels */
-label {
-    color: #333; /* Dark gray color for better readability */
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* Style the inputs */
-input[type="text"], input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-}
-
-/* Style the radio buttons */
-input[type="radio"] {
-    margin-right: 8px;
-}
-
-/* Style the submit buttons */
-input[type="submit"] {
-    background-color: #007BFF; /* Blue color */
-    color: white;
-    padding: 10px 20px;
-    margin: 10px 5px 0 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Change the button color on hover */
-input[type="submit"]:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Status and map container styling */
-#mapandstatuscontainer {
-    float: left;
-    width: 85%;
-    padding: 20px;
-    background-color: #e9ecef; /* Light gray background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
 
 /* FORM CSS END*/
 label {
