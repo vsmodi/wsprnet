@@ -31,11 +31,11 @@
                 <input type="date" id="ToDate" name="ToDate" size="10" value = "2024-04-28">
                 <br><br>
                 <label>Choose a Report:</label><br>
-                <label for="rdShowMap"><input type="radio" id="rdShowMap" name="rdData" value="Map" checked>Show Map</label><br>
-                <label for="rdShowMapAndListeners"><input type="radio" id="rdShowMapAndListeners" name="rdData" value="ShowMapAndListener">Map and Listeners</label><br>
-                <label for="rdShowData"><input type="radio" id="rdShowData" name="rdData" value="ShowData">Display Data</label><br>
-                <label for="rdDownloadCSVData"><input type="radio" id="rdDownloadCSVData" name="rdData" value="DownloadCSVData">Download Data(.CSV)</label><br>
-                <label for="rdDownloadJSONData"><input type="radio" id="rdDownloadJSONData" name="rdData" value="DownloadJSONData">Download Data (JSON)</label><br>
+                <label class="radio-label" for="rdShowMap"><input type="radio" id="rdShowMap" name="rdData" value="Map" checked>Show Map</label><br>
+                <label class="radio-label" for="rdShowMapAndListeners"><input type="radio" id="rdShowMapAndListeners" name="rdData" value="ShowMapAndListener">Map and Listeners</label><br>
+                <label class="radio-label" for="rdShowData"><input type="radio" id="rdShowData" name="rdData" value="ShowData">Display Data</label><br>
+                <label class="radio-label" for="rdDownloadCSVData"><input type="radio" id="rdDownloadCSVData" name="rdData" value="DownloadCSVData">Download Data(.CSV)</label><br>
+                <label class="radio-label" for="rdDownloadJSONData"><input type="radio" id="rdDownloadJSONData" name="rdData" value="DownloadJSONData">Download Data (JSON)</label><br>
                 <br>
                 <input type="submit" value="Display Data" id="DisplayData" name="DisplayData" onclick="ProcessForm();">
                 <input type="submit" formnovalidate value="Clear Form" id="Clear" name="Clear" onclick="ClearForm();">
