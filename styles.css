@@ -21,6 +21,27 @@ body.map-page {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.map-head {
+    position: relative;
+    padding: 10px;
+}
+
+.header-links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.header-links a {
+    color: #000;  /* Customize link color */
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.header-links a:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
 label.radio-label {
     font-weight: 300 !important;
 }
