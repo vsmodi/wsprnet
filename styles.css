@@ -63,12 +63,11 @@ body.map-page {
     right: 0;
     bottom: 0;
     background-image: url('Screenshot 2024-11-13 010255.png');
-    background-size: contain; /* Ensures image doesn’t stretch and maintains original aspect ratio */
-    background-repeat: no-repeat;
+    background-size: cover; /* Stretches the image to cover the entire header */
     background-position: center;
-    opacity: 0.85; /* Sets a gentle transparency */
-    filter: blur(2px); /* Subtle blur */
-    z-index: -1; /* Keeps background behind header content */
+    background-repeat: no-repeat;
+    opacity: 0.85; /* Slight opacity for a soft overlay effect */
+    z-index: -1; /* Places the background behind header content */
 }
 
 
