@@ -55,7 +55,7 @@ body.map-page {
     color: #fff; /* Adjusts header text color if needed */
     overflow: hidden;
 }
-
+/*
 .map-head::before {
     content: "";
     position: absolute;
@@ -71,7 +71,7 @@ body.map-page {
     z-index: -1; /* Places the background behind header content */
 }
 
-
+*/
 .map-head .header-links {
     position: absolute;
     top: 10px;
