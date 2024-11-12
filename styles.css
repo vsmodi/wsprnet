@@ -50,6 +50,7 @@ body.map-page {
 .map-head {
     position: relative;
     padding: 10px;
+    height : 500px;
     text-align: center;
     color: #fff; /* Adjusts header text color if needed */
     overflow: hidden;
@@ -66,7 +67,7 @@ body.map-page {
     background-size: cover; /* Stretches the image to cover the entire header */
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.85; /* Slight opacity for a soft overlay effect */
+    opacity: 1; /* Slight opacity for a soft overlay effect */
     z-index: -1; /* Places the background behind header content */
 }
 
