@@ -67,7 +67,7 @@ body.map-page {
     background-size: cover; /* Stretches the image to cover the entire header */
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 1; /* Slight opacity for a soft overlay effect */
+    opacity: 0.7; /* Slight opacity for a soft overlay effect */
     z-index: -1; /* Places the background behind header content */
 }
 
