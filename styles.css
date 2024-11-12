@@ -18,7 +18,7 @@ body.home-page header {
     margin-left: 10px;
 }
 body.home-page .header-links {
-    position: absolute;
+   /* position: absolute;*/
     top: 10px;
     right: 10px;
 }
