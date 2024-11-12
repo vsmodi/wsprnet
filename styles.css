@@ -50,7 +50,7 @@ body.map-page {
 .map-head {
     position: relative;
     padding: 10px;
-    height : 200px;
+    height : 130px;
     text-align: center;
     color: #fff; /* Adjusts header text color if needed */
     overflow: hidden;
