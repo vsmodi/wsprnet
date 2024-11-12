@@ -26,19 +26,19 @@ body.map-page {
     padding: 10px;
 }
 
-.header-links {
+.map-head .header-links {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-.header-links a {
+.map-head .header-links a {
     color: #000;  /* Customize link color */
     text-decoration: none;
     margin-left: 10px;
 }
 
-.header-links a:hover {
+.map-head .header-links a:hover {
     text-decoration: underline; /* Optional: underline on hover */
 }
 
