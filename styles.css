@@ -54,7 +54,7 @@ body.map-page {
     right: 10px;
 }
 
-.map-head .header-links a {
+.map-head > .header-links a {
     color: #000;  /* Customize link color */
     text-decoration: none;
     margin-left: 10px;
