@@ -50,7 +50,26 @@ body.map-page {
 .map-head {
     position: relative;
     padding: 10px;
+    text-align: center;
+    color: #fff; /* Adjusts header text color if needed */
+    overflow: hidden;
 }
+
+.map-head::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Screenshot 2024-11-13 010255.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; /* Adjusts opacity */
+    filter: blur(5px); /* Adjusts blur effect */
+    z-index: -1; /* Places the background behind the header content */
+}
+
 
 .map-head .header-links {
     position: absolute;
