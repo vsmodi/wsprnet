@@ -7,7 +7,7 @@ body.home-page{
     height: 100%;
     overflow-x: hidden;
 }
-body.home-page header {
+/* body.home-page header {
     position: relative !important;
     padding: 10px;
     text-align: center;
@@ -24,7 +24,32 @@ body.home-page .header-links {
 }
 
 body.home-page .header-links a {
-    color: #fff;  /* White font color */
+    color: #fff; 
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+body.home-page .header-links a:hover {
+    text-decoration: underline;
+}
+*/
+body.home-page header {
+    position: relative; /* Allows positioning within header */
+    padding: 10px;
+    text-align: center;
+}
+
+body.home-page .header-links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* Adjust styling as needed */
+    display: flex;
+    gap: 10px;
+}
+
+body.home-page .header-links a {
+    color: #fff;
     text-decoration: none;
     margin-left: 10px;
 }
