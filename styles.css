@@ -13,7 +13,7 @@ body.home-page header {
     text-align: center;
 }
 .map-page .header-links a {
-    color: #000;  /* Customize link color */
+    color: #fff;  /* Customize link color */
     text-decoration: none;
     margin-left: 10px;
 }
