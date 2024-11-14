@@ -63,7 +63,7 @@ body.map-page {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('WSPR.png');
+    background-image: url('WSPRnet.png');
     background-size: cover; /* Stretches the image to cover the entire header */
     background-position: center;
     background-repeat: no-repeat;
