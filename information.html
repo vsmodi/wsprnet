@@ -12,15 +12,46 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
         .info-head {
-            background-image: url('headback.png');
+            background-image: url('headback.png'); /* Use your high-quality image path */
             background-size: cover;
             background-position: center;
-            height: 150px; /* Adjust height as needed */
+            height: 250px; /* Increased height for better visibility */
             color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
+        }
+
+        .info-head .title {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .info-head .title h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-head .title p {
+            font-size: 20px;
+            margin: 5px 0 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-header-links {
+            position: absolute;
+            top: 10px;
+            right: 20px;
         }
 
         .info-header-links a {
@@ -28,6 +59,7 @@
             text-decoration: none;
             margin: 0 10px;
             font-weight: bold;
+            font-size: 16px;
         }
 
         .info-header-links a:hover {
@@ -38,13 +70,16 @@
 
 <body class="info-page">
     <form id="myform" onsubmit="return false">
-        <div>
-            <header class="info-head">
-                <div class="info-header-links">
-                    <a href="index.html">Home</a> |
-                    <a href="information.html">Information</a>
-                </div>
-            </header>
-        </div>
+        <header class="info-head">
+            <div class="info-header-links">
+                <a href="index.html">Home</a> |
+                <a href="map.html">Map</a>
+            </div>
+            <div class="title">
+                <h1>WSPRnet</h1>
+                <p>Weak Signal Propagation Reporter Network</p>
+            </div>
+        </header>
+    </form>
 </body>
 </html>
