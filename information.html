@@ -21,6 +21,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            color: black;
         }
 
         .info-head {
@@ -30,25 +31,25 @@
             height: 200px;
             color: white;
             position: relative;
-            text-align: center;
         }
 
         .info-head .title {
             position: absolute;
             top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            left: 20px; /* Align the header to the left */
+            transform: translateY(-50%);
+            text-align: left;
         }
 
         .info-head .title h1 {
-            font-size: 60px;
+            font-size: 65px; /* Bigger heading */
             font-weight: bold;
             margin: 0;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .info-head .title p {
-            font-size: 20px;
+            font-size: 22px;
             margin: 5px 0 0;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
@@ -72,21 +73,18 @@
         }
 
         .content {
-            max-width: 1000px; /* Wider content area */
+            max-width: 90%; /* Reduced side margins */
             margin: 50px auto;
-            padding: 0 20px; /* Add some padding for inner spacing */
+            padding: 0 20px; /* Inner spacing */
             text-align: justify;
-            font-size: 18px;
+            font-size: 20px; /* Slightly larger font */
             line-height: 1.8;
-            color: #fff; /* White text for better readability */
         }
 
         .content h2 {
             text-align: center;
-            font-size: 30px; /* Bigger heading */
+            font-size: 35px; /* Bigger heading */
             margin-bottom: 20px;
-            color: #ffe600; /* Highlighted yellow title for emphasis */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
