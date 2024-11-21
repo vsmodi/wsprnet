@@ -18,52 +18,40 @@
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-        }
-        body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
         }
 
         .info-head {
-            background-image: url('headback2.png'); /* Use your high-quality image path */
+            background-image: url('headback2.png');
             background-size: cover;
             background-position: center;
-            height: 250px; /* Increased height for better visibility */
+            height: 200px;
             color: white;
             position: relative;
+            text-align: center;
         }
 
-        .info-head {
-    background-image: url('headback2.png'); /* Use your high-quality image path */
-    background-size: cover;
-    background-position: center;
-    height: 150px; /* Reduced height */
-    color: white;
-    position: relative;
-}
+        .info-head .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-.info-head .title {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 20px; /* Align WSPRnet to the left */
-    text-align: left; /* Ensure left alignment */
-}
+        .info-head .title h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-.info-head .title h1 {
-    font-size: 60px; /* Make WSPRnet bigger */
-    font-weight: bold;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.info-head .title p {
-    font-size: 20px;
-    margin: 5px 0 0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    margin-left: 10px; /* Indent tagline slightly to the right */
-}
+        .info-head .title p {
+            font-size: 20px;
+            margin: 5px 0 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
 
         .info-header-links {
             position: absolute;
@@ -82,27 +70,53 @@
         .info-header-links a:hover {
             text-decoration: underline;
         }
+
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .content h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
     </style>
 </head>
 
 <body class="info-page">
-    <form id="myform" onsubmit="return false">
-        <header class="info-head">
-            <div class="info-header-links">
-                <a href="index.html">Home</a> |
-                <a href="map.html">Map</a>
-            </div>
-            <div class="title">
-                <h1>WSPRnet</h1>
-                <p>Weak Signal Propagation Reporter Network</p>
-            </div>
-        </header>
-    </form>
+    <header class="info-head">
+        <div class="info-header-links">
+            <a href="index.html">Home</a> |
+            <a href="map.html">Map</a>
+        </div>
+        <div class="title">
+            <h1>WSPRnet</h1>
+            <p>Weak Signal Propagation Reporter Network</p>
+        </div>
+    </header>
 
-    <p> This Master’s graduate project explores the innovative adaptation of the Weak Signal Propagation Reporter (WSPR) protocol for real-time tracking of high-altitude balloons. Traditionally used for monitoring stationary transmitters, WSPR's static nature limited its application for dynamic objects. By integrating GPS data and leveraging technologies like HTML, CSS, JavaScript, and Leaflet.js, the project created an interactive mapping solution to visualize balloon trajectories in real time. This new system successfully addresses challenges in accuracy and usability, providing a more dynamic and insightful representation of moving transmitters.</p>
+    <div class="content">
+        <h2>Information about WSPR</h2>
+        <p>
+            This Master’s graduate project explores the innovative adaptation of the Weak Signal Propagation Reporter (WSPR) protocol for real-time tracking of high-altitude balloons. Traditionally used for monitoring stationary transmitters, WSPR's static nature limited its application for dynamic objects. By integrating GPS data and leveraging technologies like HTML, CSS, JavaScript, and Leaflet.js, the project created an interactive mapping solution to visualize balloon trajectories in real time. This new system successfully addresses challenges in accuracy and usability, providing a more dynamic and insightful representation of moving transmitters.
+        </p>
 
-<p>Leaflet.js was specifically chosen for its lightweight, open-source nature, making it an ideal choice for this project’s goal of accessibility and scalability. Unlike other mapping libraries that can be costly or complex, Leaflet.js offers simplicity and powerful real-time map updates without the need for proprietary services. Its straightforward API allowed seamless integration with the tracking system, enabling dynamic visualization of balloon trajectories while keeping the application efficient and user-friendly.</p>
+        <p>
+            Leaflet.js was specifically chosen for its lightweight, open-source nature, making it an ideal choice for this project’s goal of accessibility and scalability. Unlike other mapping libraries that can be costly or complex, Leaflet.js offers simplicity and powerful real-time map updates without the need for proprietary services. Its straightforward API allowed seamless integration with the tracking system, enabling dynamic visualization of balloon trajectories while keeping the application efficient and user-friendly.
+        </p>
 
-<p>The system incorporates user-friendly features, including customizable data queries and various visualization options. Users can view balloon paths on an interactive map, access raw data, and download the information in multiple formats such as CSV or JSON for analysis. Beyond its application to high-altitude balloons, the platform demonstrates the potential of combining low-power, long-range communication protocols with advanced visualization tools like Leaflet.js. Future enhancements could include altitude visualization, sensor data integration, and applications to drones or wildlife monitoring, making it a versatile solution for real-time tracking and research.</p>
+        <p>
+            The system incorporates user-friendly features, including customizable data queries and various visualization options. Users can view balloon paths on an interactive map, access raw data, and download the information in multiple formats such as CSV or JSON for analysis. Beyond its application to high-altitude balloons, the platform demonstrates the potential of combining low-power, long-range communication protocols with advanced visualization tools like Leaflet.js. Future enhancements could include altitude visualization, sensor data integration, and applications to drones or wildlife monitoring, making it a versatile solution for real-time tracking and research.
+        </p>
+    </div>
 </body>
 </html>
