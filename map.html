@@ -12,107 +12,70 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    .info-head {
-        background-image: url('headback2.png'); /* Use your high-quality image path */
-        background-size: cover;
-        background-position: center;
-        height: 150px;
-        color: white;
-        position: relative;
-    }
-
-    .info-head .title {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 20px; /* Align WSPRnet to the left */
-        text-align: left;
-    }
-
-    .info-head .title h1 {
-        font-size: 60px;
-        font-weight: bold;
-        margin: 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .info-head .title p {
-        font-size: 20px;
-        margin: 5px 0 0;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-
-    .info-header-links {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-    }
-
-    .info-header-links a {
-        color: white;
-        text-decoration: none;
-        margin: 0 10px;
-        font-weight: bold;
-        font-size: 16px;
-    }
-
-    .info-header-links a:hover {
-        text-decoration: underline;
-    }
-
-    /* Flexbox layout for the form and map */
-    #selectioncontainer {
-        width: 300px;
-        padding: 20px;
-        box-sizing: border-box;
-        background-color: #f4f4f4;
-        border-radius: 8px;
-    }
-
-    #mapandstatuscontainer {
-        flex: 1;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    #mapcontainer {
-        width: 100%;
-        height: 500px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    #map {
-        width: 100%;
-        height: 100%;
-    }
-
-    .form-and-map-container {
-        display: flex;
-        flex-wrap: wrap; /* Allows wrapping for small screens */
-        gap: 20px;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    /* Adjust for smaller screens */
-    @media (max-width: 768px) {
-        .form-and-map-container {
-            flex-direction: column;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
 
-        #mapandstatuscontainer {
-            width: 100%;
+        .info-head {
+            background-image: url('headback2.png'); /* Use your high-quality image path */
+            background-size: cover;
+            background-position: center;
+            height: 250px; /* Increased height for better visibility */
+            color: white;
+            position: relative;
         }
-    }
-</style>
+
+        .info-head {
+    background-image: url('headback2.png'); /* Use your high-quality image path */
+    background-size: cover;
+    background-position: center;
+    height: 150px; /* Reduced height */
+    color: white;
+    position: relative;
+}
+
+.info-head .title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px; /* Align WSPRnet to the left */
+    text-align: left; /* Ensure left alignment */
+}
+
+.info-head .title h1 {
+    font-size: 60px; /* Make WSPRnet bigger */
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.info-head .title p {
+    font-size: 20px;
+    margin: 5px 0 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-left: 10px; /* Indent tagline slightly to the right */
+}
+
+        .info-header-links {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .info-header-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .info-header-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body class="map-page">
@@ -127,40 +90,37 @@
                 <p>Weak Signal Propagation Reporter Network</p>
             </div>
         </header>
-
-        <div class="form-and-map-container">
-            <!-- Form Section -->
-            <div id="selectioncontainer">
+<div id="selectioncontainer">
                 <label for="Reporter">Call Sign:</label><br>
                 <input type="text" id="Reporter" name="Reporter" size="8" maxlength="8" value="WA5LRU/2">
+                <label class="error" for="Reporter" id="ReporterError"></label>
                 <br><br>
                 <label for="FromDate">From Date: </label><br>
-                <input type="date" id="FromDate" name="FromDate" value="2024-04-01">
+                <input type="date" id="FromDate" name="FromDate" size="10" value = "2024-04-01">
                 <br><br>
                 <label for="ToDate">To Date:</label><br>
-                <input type="date" id="ToDate" name="ToDate" value="2024-04-28">
+                <input type="date" id="ToDate" name="ToDate" size="10" value = "2024-04-28">
                 <br><br>
                 <label>Choose a Report:</label><br>
-                <label for="rdShowMap"><input type="radio" id="rdShowMap" name="rdData" value="Map" checked>Show Map</label><br>
-                <label for="rdShowMapAndListeners"><input type="radio" id="rdShowMapAndListeners" name="rdData" value="ShowMapAndListener">Map and Listeners</label><br>
-                <label for="rdShowData"><input type="radio" id="rdShowData" name="rdData" value="ShowData">Display Data</label><br>
-                <label for="rdDownloadCSVData"><input type="radio" id="rdDownloadCSVData" name="rdData" value="DownloadCSVData">Download Data (.CSV)</label><br>
-                <label for="rdDownloadJSONData"><input type="radio" id="rdDownloadJSONData" name="rdData" value="DownloadJSONData">Download Data (JSON)</label><br>
+                <label class="radio-label" for="rdShowMap"><input type="radio" id="rdShowMap" name="rdData" value="Map" checked>Show Map</label><br>
+                <label class="radio-label" for="rdShowMapAndListeners"><input type="radio" id="rdShowMapAndListeners" name="rdData" value="ShowMapAndListener">Map and Listeners</label><br>
+                <label class="radio-label" for="rdShowData"><input type="radio" id="rdShowData" name="rdData" value="ShowData">Display Data</label><br>
+                <label class="radio-label" for="rdDownloadCSVData"><input type="radio" id="rdDownloadCSVData" name="rdData" value="DownloadCSVData">Download Data(.CSV)</label><br>
+                <label class="radio-label" for="rdDownloadJSONData"><input type="radio" id="rdDownloadJSONData" name="rdData" value="DownloadJSONData">Download Data (JSON)</label><br>
                 <br>
-                <input type="submit" value="Display Data" id="DisplayData" onclick="ProcessForm();">
-                <input type="submit" value="Clear Form" id="Clear" onclick="ClearForm();">
+                <input type="submit" value="Display Data" id="DisplayData" name="DisplayData" onclick="ProcessForm();">
+                <input type="submit" formnovalidate value="Clear Form" id="Clear" name="Clear" onclick="ClearForm();">
+                <br>
             </div>
-
-            <!-- Map Section -->
             <div id="mapandstatuscontainer">
-                <div id="status"></div>
+                <div id="status"></div><br>
                 <div id="mapcontainer">
                     <div id="map"></div>
                 </div>
+                <div id="data" class="mono"></div>
             </div>
         </div>
     </form>
-
     <script src="script.js"></script>
 </body>
 </html>
